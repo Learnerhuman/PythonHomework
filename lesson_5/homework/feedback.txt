@@ -1,0 +1,33 @@
+FEEDBACK SUMMARY:
+- What was done well
+- All tasks were completed, demonstrating a good understanding of the Python concepts required.
+- The code is generally well-structured and readable.
+- Function definitions and calls are correctly implemented.
+- Input and output formatting, including rounding and f-strings, are used effectively.
+- Task 1: Both conversion functions are correct and the user interaction is as expected.
+- Task 2: The `invest` function correctly calculates and prints the investment growth year by year.
+- Task 3: The factor-finding logic is sound and produces the correct output.
+- Task 4: The `enrollment_stats`, `mean`, and `median` functions are correctly implemented and integrated. The output formatting is excellent.
+- Task 5: The `is_prime` function correctly identifies prime numbers with an efficient approach.
+
+- What needs improvement
+- Task 1: While the code works, the prompt for the second temperature conversion could be slightly more explicit to match the sample output's flow. Specifically, the sample output has "Enter a temperature in degrees C:" on a new line after the first conversion output. Your code achieves this with `\n` in the print statement, which is good, but ensuring the prompts themselves are exactly as shown in the sample might be a minor refinement.
+- Task 4: In the `median` function, the line `lst = sorted(lst)` modifies the original list passed into the function. While this works for the current use case because `students` and `tuition` are not needed in their original unsorted state afterward, it's generally considered better practice for functions to not modify their input arguments unless that is their explicit purpose. A more robust approach would be to sort a copy of the list, like `sorted_lst = sorted(lst)`.
+- Task 4: The formatting for the median values (`{median(students):,}`) does not include decimal places, which is consistent with the sample output, but it's worth noting that the `mean` functions do include two decimal places.
+
+- Any major issues (e.g., logic errors, misunderstanding, incomplete solutions)
+- No major logic errors or misunderstandings were found. All tasks were completed correctly.
+
+KEY ADVICE:
+- Top 2 or 3 suggestions to improve Python skills:
+1. **Embrace Immutability (where appropriate):** When writing functions that process data, try to avoid modifying the original input data unless it's the function's specific job. This makes your code more predictable and easier to debug. For functions like `median`, sorting a *copy* of the list is a good habit.
+2. **Understand Function Side Effects:** Be aware of what your functions do beyond just returning a value. In Task 4, the `median` function's sorting of the input list is a "side effect" that could surprise someone using the function if they expected the original list to remain unchanged.
+3. **Practice Defensive Programming:** For example, in Task 3, the prompt asks for a *positive* integer. Your code assumes the user will enter one. In a real-world application, you might want to add checks to ensure the input is indeed a positive integer and handle cases where it's not. This wasn't required by the prompt but is a good practice to consider as you advance.
+
+- Highlight any concepts to revisit:
+- **List Copying vs. Referencing:** Understanding when you are working with a reference to a list versus a copy of a list is crucial for avoiding unintended side effects. The `sorted()` function when called without an argument on a list creates a new sorted list, while `list.sort()` sorts the list in-place.
+
+- Encourage further learning and effort:
+This is an excellent submission with a strong grasp of fundamental Python programming. You've successfully tackled a variety of tasks involving functions, user input, loops, conditional statements, and data structures. Keep up this great work! Your understanding of the core concepts is solid, and by paying attention to these finer points of code practice, you'll continue to write even more robust and maintainable Python code.
+
+=== EVALUATION COMPLETE ===
