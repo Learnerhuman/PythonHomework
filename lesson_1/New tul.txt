@@ -1,0 +1,29 @@
+
+## 1️⃣ Klaviatura orqali (eng tez)
+
+* **Windows / Linux:** `Ctrl + C` → nusxa olish
+* **Mac:** `Cmd + C` → nusxa olish
+* Oldin **kursorni satr ustiga qo‘y**, hech narsa tanlamasang ham, VS Code **butun satrni copy qiladi**.
+
+💡 Qo‘shimcha:
+
+* `Ctrl + X` (Cut) — satrni olib tashlab copy qiladi
+
+---
+
+## 2️⃣ Mouse bilan
+
+* Satr ustida **uch marta tez bosish** → butun satr tanlanadi
+* O‘ng tugma → **Copy**
+* Keyin joylashtirish: o‘ng tugma → **Paste**
+
+---
+
+## 3️⃣ Qo‘shimcha tezlik (Move / Duplicate)
+
+* **Windows / Linux:** `Shift + Alt + Down/Up` → satrni pastga/yuqoriga ko‘chirish
+* **Windows / Linux:** `Ctrl + Shift + D` → satrni **duplicate (nusxalash)**
+* **Mac:** `Shift + Option + Down/Up` → satrni pastga/yuqoriga ko‘chirish
+* **Mac:** `Cmd + Shift + D` → satrni duplicate qilish
+
+
