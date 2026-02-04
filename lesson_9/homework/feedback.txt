@@ -1,0 +1,48 @@
+FEEDBACK SUMMARY:
+- What was done well
+- **Task 1 (Library Management System):**
+- Correctly defined custom exceptions.
+- Implemented `Book`, `Member`, and `Library` classes with appropriate attributes and methods.
+- Successfully demonstrated basic borrowing and returning functionality.
+- Included a `try-except` block to catch exceptions during testing.
+- The `__str__` method for `Book` is a good addition for readability.
+- **Task 2 (Student Grades Management):**
+- Successfully read data from a CSV file using the `csv` module.
+- Correctly calculated average grades per subject.
+- Wrote the calculated averages to a new CSV file as required.
+- Handled data type conversions (e.g., `float` for grades).
+- **Task 3 (JSON Handling):**
+- Correctly loaded data from a JSON file.
+- Displayed task information clearly.
+- Implemented a function to calculate task statistics (total, completed, pending, average priority).
+- Successfully converted JSON data to a CSV file.
+- Used `json.dump` with `indent=4` for better JSON file readability.
+
+- What needs improvement
+- **Task 1 (Library Management System):**
+- **Indentation Issues:** There are several indentation errors in the class definitions (`Book`, `Member`, `Library`). For example, the `__str__` method in `Book` is not properly indented, and methods within `Member` and `Library` also have alignment issues. This will cause `IndentationError` when running the code.
+- **`BookNotFoundException` in `return_book`:** The `return_book` method raises `BookNotFoundException` if the book is not found in the `member.borrowed_books` list. While the exception name is somewhat fitting, it might be more precise to have a `BookNotBorrowedByMemberException` to distinguish it from a book not existing in the library at all.
+- **Completeness of Testing:** The testing section is good but could be expanded to explicitly test all custom exceptions (e.g., trying to borrow a book that doesn't exist, trying to borrow an already borrowed book, trying to borrow when the member limit is reached). The current `try-except` block only catches one potential exception.
+- **Task 2 (Student Grades Management):**
+- **File Creation:** The `grades.csv` content is provided as a multiline string `aa` within the code. For a complete solution, this content should be written to an actual `grades.csv` file before the reading part of the script is executed, or the script should assume the file already exists.
+- **Task 3 (JSON Handling):**
+- **File Creation:** Similar to Task 2, the `tasks.json` content is provided as a multiline string `sa`. This content should be written to an actual `tasks.json` file before the JSON loading part of the script.
+- **Modifying JSON and Saving:** The code modifies `tasks[0]["completed"] = True` and then saves the changes. While this demonstrates saving, it would be more robust to have a clear mechanism or a user interaction to choose which task to modify or to perform multiple modifications before saving.
+
+- Any major issues (e.g., logic errors, misunderstanding, incomplete solutions)
+- **Task 1 - Indentation Errors:** The most critical issue is the widespread indentation errors in the class definitions. These are syntax errors that will prevent the program from running.
+- **Task 1 - Missing `__init__` calls:** The `__init__` methods for `Book` and `Member` are not correctly defined due to indentation. This means the objects wouldn't be initialized correctly if the indentation were fixed.
+- **Task 2 & 3 - Missing File Creation:** The solutions for Task 2 and Task 3 assume the input CSV and JSON files already exist and contain the specified data. For a self-contained and fully runnable solution, the code should include steps to create these files with the provided content.
+
+KEY ADVICE:
+- **Master Indentation:** Python uses indentation to define code blocks. Pay very close attention to the indentation of your code. Each new block (like inside a function, class, or loop) should be indented consistently (usually 4 spaces). Incorrect indentation is a common source of errors for beginners.
+- **Modularize and Test Thoroughly:** Break down your code into smaller, manageable functions and classes. Test each component thoroughly, especially when dealing with exceptions. Explicitly test each exception case to ensure your error handling is robust.
+- **Understand File Handling:** For tasks involving reading from and writing to files (CSV, JSON), ensure that the input files are created with the correct content before your program tries to read them, or that your program handles the creation of these files. This makes your solutions self-contained and easier to test.
+
+**Concepts to revisit:**
+- Python's Indentation Rules
+- Class and Method Definitions (especially `__init__`)
+- Exception Handling (`try`, `except`, custom exceptions)
+- File I/O operations (reading and writing CSV and JSON)
+
+Keep up the great work! You've demonstrated a good understanding of several core Python concepts. Focusing on these key areas will significantly improve your code's correctness and readability.
