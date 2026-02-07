@@ -1,0 +1,25 @@
+FEEDBACK SUMMARY:
+- What was done well:
+- Both tasks demonstrate a good understanding of making API requests using the `requests` library.
+- The code is generally well-structured and readable, following a logical flow for each task.
+- You've correctly identified how to extract specific data points from the JSON responses.
+- Task 2 shows excellent initiative by first fetching available genres and then mapping user input to the correct genre ID. The use of `random.choice` for movie recommendation is a good touch.
+- The use of f-strings for constructing URLs and for printing output is a modern and clean approach.
+- Both scripts include basic error handling (checking `response.status_code` and handling cases where no movies are found).
+
+- What needs improvement:
+- **Task 1: Indentation Errors**: There are significant indentation errors in the Task 1 code. The lines fetching and printing weather data (`temperature = data["main"]["temp"]`, `humidity = data["main"]["humidity"]`, etc., and all the `print` statements) are incorrectly indented. They should be at the same level as `data = response.json()`, within the `if response.status_code == 200:` block.
+- **API Key Management**: For both tasks, the API keys are hardcoded directly in the script. While this is acceptable for a learning exercise, it's important to be aware that in real-world applications, sensitive information like API keys should be stored more securely (e.g., using environment variables).
+- **Error Handling Robustness**: While basic error handling is present, you could consider more specific error messages. For instance, if the city is not found in Task 1, the API might return a 404 status code. You could add a check for this specific code to provide a more informative message. Similarly, for Task 2, if the movie API request itself fails, the `movie_response.json()` call might raise an error if the response is not valid JSON.
+
+- Any major issues (e.g., logic errors, misunderstanding, incomplete solutions):
+- The primary major issue is the **indentation error in Task 1**, which will cause a `SyntaxError` and prevent the code from running as intended. The logic for fetching and displaying data is sound, but the incorrect indentation makes it syntactically invalid.
+- Task 2 is conceptually complete and logically sound, assuming valid API keys are provided.
+
+KEY ADVICE:
+- **Master Indentation**: Python relies heavily on indentation to define code blocks. Pay very close attention to how code is indented within `if`, `else`, `for`, and `while` statements. Always ensure that lines intended to be part of a block are indented consistently and correctly. Use an IDE with good syntax highlighting and auto-indentation to help catch these issues.
+- **API Key Security**: As you progress, learn about best practices for managing API keys and other sensitive credentials, such as using environment variables. This will be crucial for building more robust and secure applications.
+- **Explore API Documentation Thoroughly**: You've done a great job of using the provided API documentation. Continue to do so! Look for optional parameters that can refine your requests (e.g., language codes, sorting options for movies) and understand the full structure of the responses you receive.
+
+You've made excellent progress on these tasks! Addressing the indentation in Task 1 will get it running perfectly, and your approach to Task 2 is very strong. Keep up the great work and continue experimenting!
+=== EVALUATION COMPLETE ===
