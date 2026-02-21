@@ -1,0 +1,26 @@
+FEEDBACK SUMMARY:
+- What was done well:
+- Excellent understanding of merging, joining, grouping, and applying functions using pandas.
+- The code is generally well-structured, readable, and follows good practices.
+- The use of `groupby().agg()` with named aggregations is a strong indicator of good pandas proficiency.
+- The custom functions for classifying age and movie duration are clear and correct.
+- The implementation of `pipe` for creating pipelines is a great demonstration of understanding advanced pandas features.
+- The normalization of salaries using `transform` within `groupby` is a sophisticated approach.
+
+- What needs improvement:
+- For the "Outer Join on Movie Data" task, while you correctly performed a left and outer join and counted the rows, the prompt also implicitly asked to count rows *for each join type*. Simply printing the total number of rows in the resulting DataFrames is a good start, but a more complete answer might involve understanding what those row counts represent in the context of joins and potentially performing further analysis if needed. However, for a beginner's submission, this is a minor point.
+
+- Any major issues (e.g., logic errors, misunderstanding, incomplete solutions):
+- No major logic errors or misunderstandings were found. The code is functionally correct and addresses all parts of the questions.
+
+KEY ADVICE:
+- Top 2 or 3 suggestions to improve Python skills:
+1. **Deeper Dive into Join Types and Their Implications:** While you correctly executed `left` and `outer` joins, spend some time understanding *why* the row counts might differ and what happens to rows that don't have matches in the other DataFrame. For `left` joins, it's about preserving all rows from the left DataFrame. For `outer` joins, it's about preserving all rows from both. Understanding this will help you interpret your results more thoroughly.
+2. **Error Handling and Edge Cases:** For the custom functions, consider potential edge cases. For example, in `classify_age`, you handled `pd.isna(age)`. This is excellent! For `classify_duration`, what if `duration` was `NaN`? The current function would raise an error. You could add a check for `pd.isna(duration)` and return "Unknown" or a similar indicator. This is a sign of robust programming.
+3. **Explore More Aggregation Functions:** You've used `mean`, `sum`, and `count` effectively. Pandas offers a rich set of aggregation functions (e.g., `min`, `max`, `std`, `median`, `nunique`). Experimenting with these will expand your data analysis toolkit.
+
+- Highlight any concepts to revisit:
+- **`reset_index()` after `groupby`:** You've used `reset_index()` correctly to turn the grouped output back into a DataFrame. Just ensure you understand what `groupby()` does to the index and why `reset_index()` is often necessary to work with the grouped columns as regular columns again.
+
+- Encourage further learning and effort:
+- This is an outstanding submission! You've demonstrated a strong grasp of essential pandas operations. Keep up the great work, and continue to explore the vast capabilities of pandas. The `pipe` method, in particular, shows you're thinking about code organization and efficiency. Don't hesitate to tackle more complex datasets and challenges!
